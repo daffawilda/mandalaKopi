@@ -1,0 +1,246 @@
+l<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="asset/js/data.js" defer></script>
+    <script src="asset/js/menu.js" defer></script>
+    <!-- Menyertakan file JavaScript untuk menu -->
+    <!-- Menyertakan file JavaScript -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <style>
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    </style>
+    <title>Payment</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div style="display: flex">
+        <a style="padding-left: 50px; padding-top: 50px" href="index.html">
+          <h3 class="fa-solid fa-arrow-left mt-1"></h3>
+        </a>
+        <h3 class="ms-2" style="padding-top: 50px">Payment Method</h3>
+      </div>
+    </div>
+    <div class="container col-md-7 mx-auto">
+      <ul class="d-flex justify-content-start align-items-center mb-4">
+        <li>
+          <img class="icon" src="asset/img/icon/gopay.png" alt="gopay" />
+        </li>
+        <div
+          class="d-flex justify-content-between align-items-center"
+          style="width: 500px"
+        >
+          <li class="ms-2">
+            <h4>Gopay</h4>
+            Saldo : Rp.120.000
+          </li>
+          <li>
+            <input class="form-check-input me-4" type="radio" name="gopay" />
+          </li>
+        </div>
+      </ul>
+      <ul class="d-flex justify-content-start align-items-center">
+        <li>
+          <img class="icon" src="asset/img/icon/visa.png" alt="gopay" />
+        </li>
+        <div
+          class="d-flex justify-content-between align-items-center"
+          style="width: 500px"
+        >
+          <li class="ms-2">
+            <h4>Credit or debit card</h4>
+            Visa, Mastercard, AMEX, and JCB
+          </li>
+          <li class="text-end">
+            <input
+              class="btn btn-mandala"
+              type="button"
+              name="credit"
+              value="Add"
+            />
+          </li>
+        </div>
+      </ul>
+      <div
+        class="accordion accordion-flush me-5 pe-5"
+        id="accordionFlushExample"
+      >
+        <div class="accordion-item my-1">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed d-flex justify-content-between"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              <svg
+                class="ms-2"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="48" height="48" fill="url(#pattern0_545_1184)" />
+                <defs>
+                  <pattern
+                    id="pattern0_545_1184"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_545_1184"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_545_1184"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,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"
+                  />
+                </defs>
+              </svg>
+
+              <div class="ms-5">
+                <h4>Transfer Bank</h4>
+                (automatic Check)
+              </div>
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <ul class="list-group list-group-flush">
+                <li
+                  class="list-group-item d-flex justify-content-around align-items-center"
+                >
+                  <svg
+                    width="70"
+                    height="70"
+                    viewBox="4.445 -155.668 462.37 462.37"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#000000"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        fill="#005FAF"
+                        stroke="#005FAF"
+                        d="M255.169 72.04c29.217-13.252 33.538-56.497-8.021-56.497H199.02l-17.786 34.875h8.37l-21.274 83.351h55.8c40.709.348 59.017-47.588 31.039-61.729zm-31.039 31.388h-13.95l5.231-18.832h13.252c15.694 3.138 5.93 19.529-4.533 18.832zm8.37-40.107h-11.857l3.487-16.391h13.252c12.805 3.139 1.745 17.089-4.882 16.391z"
+                      ></path>
+                      <path
+                        fill="#005FAF"
+                        stroke="#005FAF"
+                        d="M369.418 60.083l18.271-32.254-24.723-12.896-3.225 3.98c-13.337-7.06-83.176 2.688-87.549 71.581 2.614 57.793 67.373 47.397 73.725 43.73l17.811-36.819c-17.444 11.49-53.162 17.006-54.673-17.509 3.133-28.462 36.737-39.091 60.363-19.813zM460.592 15.543h-56.169l-17.854 33.831h9.172l-42.33 84.395h40.973l8.412-20.356h25.151l.627 20.356h37.717l-5.699-118.226zm-46.401 70.463l13.755-32.833.627 32.833h-14.382z"
+                      ></path>
+                      <g fill="#005FAF">
+                        <path
+                          d="M109.826 128.125l2.182-.633-2.393-3.307zM74.004 127.562l-.422 2.956c1.086-.106 2.423.83 2.956-1.267-.04-1.634-1.284-1.724-2.534-1.689zM91.388 127.492c-.181-.805-.853-1.398-2.534-.844l.563 3.025c1.381-.306 2.091-1.123 1.971-2.181zM52.117 125.016l-.672 2.688c1.08.045 2.345.921 3.062-.672.048-.998.089-1.992-2.39-2.016zM89.91 131.926l.493 3.097c1.153.029 2.205-.664 1.9-2.111-.294-1.392-1.463-1.172-2.393-.986z"
+                        ></path>
+                        <path
+                          d="M135.678 17.137C98.411-1.848 53.904-1.32 18.396 16.309c-18.31 32.233-18.893 77.332 0 117.276 39.119 19.796 82.385 18.492 117.557.828 16.53-33.913 19.26-74.721-.275-117.276zm-62.94 96.248l-2.209.025c-.547-6.104-2.006-11.234-5.136-15.16C51.04 80.251 21.7 93.802 29.239 63.213c3.92-15.638 48.633-24.861 43.499 50.172zM29.292 83.173c3.134 6.379 22.769 7.424 29.585 12.307 10.812 7.745 9.26 17.933 9.26 17.933h-2.55c-5.02-15.387-19.109-3.204-30.394-7.348-7.085-2.52-12.229-13.443-5.901-22.892zm35.774 50.161l1.056-8.375 1.9.141-.845 9.219c-.852 4.061-6.907 3.518-7.671-.352l.985-9.571 2.252.353-.985 8.022c.125 2.655 2.788 2.496 3.308.563zm-10.111 2.287l-2.166-.523c.254-1.79 2.377-5.432-1.819-5.432l-1.168 4.76-2.39-.448 2.539-11.427c6.206.676 6.749 2.403 6.872 4.257-.245 1.438-.628 2.442-1.867 2.688 1.45 1.316.017 4.074-.001 6.125zm-13.757-12.799c-.597.792-1.792 3.559-1.965 5.764-.184 2.337 2.061 1.845 2.62 1.572.451-.219.786-2.096.786-2.096l-1.572-.524.524-1.571 3.538 1.179-1.703 5.896-1.441-.394.131-.917c-1.764.804-4.993.201-5.372-1.834-.379-1.635.769-6.592 2.62-8.908 1.799-2.252 6.182-.051 6.289 1.31.106 1.356-.429 2.882-.429 2.882l-1.65-.311s.101-.49.245-1.262c.152-.818-1.981-1.637-2.621-.786zm32.173 9.596l-.422 5.068-1.759-.07.633-12.035c4.393.091 6.911.699 6.827 3.801-.262 4.238-3.694 3.285-5.279 3.236zm4.379-19.006h-2.943c-.261-10.422 1.743-29.485-3.733-43.514-4.149-10.635-14.649-15.419-16.976-24.01-3.684-13.598 2.586-28.311 23.652-29.444 18.263 1.875 23.874 15.974 20.759 29.101-5.356 13.125-10.713 11.239-17.382 24.313-5.447 14.015-3.373 32.376-3.377 43.554zm32.639 19.288l-2.041.704-.634-12.105 2.393-.633 5.912 9.993-1.619 1.056-1.971-2.814-2.252.844.212 2.955zm-23.811-19.288h-2.354c1.94-26.766 35.575-20.951 38.649-30.239 5.316 9.208 3.405 16.972-2.146 20.952-13.794 9.894-27.021-7.322-34.149 9.287zm12.481 13.518l1.056 5.56c.657 1.281 1.103 1.044 2.111.915 1.169-.846.925-1.67.704-2.745l2.041-.281c.532 4.028-1.383 4.439-2.815 4.715-3.071.22-3.673-.378-4.504-4.363-.484-3.411-1.32-7.013 1.548-7.671 4.708-.719 4.43 1.4 4.856 2.885l-2.041.353c-.326-1.276-.795-1.782-1.83-1.688-.943.433-1.33 1.134-1.126 2.32zm-4.293 5.77c.098 1.753-.497 2.917-1.619 3.308l-4.786.985-1.9-11.612c.982-.16 5.797-1.924 6.967 1.268.577 1.949-.021 2.648-.704 3.518 1.295.416 1.732 1.424 2.042 2.533zm-12.29-58.273c10.662-30.02 35.059-24.715 40.47-11.213 7.413 27.093-16.457 19.663-31.747 30.773-5.779 5.026-8.82 10.792-8.865 19.533h-2.62c-.157-17.606-.442-30.073 2.762-39.093z"
+                        ></path>
+                      </g>
+                    </g>
+                    <h5>Bank BCA</h5>
+                  </svg>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-around align-items-center"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="70"
+                    height="70"
+                    viewBox="6.49 12.327 87.019 25.347"
+                  >
+                    <path
+                      fill="#0D2B5B"
+                      d="M6.58 29.745c0-1.259-.022-2.313-.09-3.256h2.381l.113 1.618h.066c.539-.854 1.527-1.866 3.369-1.866 1.438 0 2.56.81 3.032 2.022h.046c.382-.606.83-1.056 1.346-1.369.607-.428 1.305-.653 2.202-.653 1.82 0 3.66 1.235 3.66 4.741v6.444H20.01v-6.042c0-1.818-.629-2.898-1.954-2.898-.943 0-1.64.676-1.931 1.462a3.951 3.951 0 0 0-.135.919v6.56h-2.695v-6.336c0-1.524-.606-2.604-1.887-2.604-1.031 0-1.727.81-1.977 1.572-.111.27-.157.586-.157.898v6.47H6.58v-7.682zM33.206 34.8c0 .987.045 1.952.156 2.627h-2.493l-.179-1.212h-.068c-.674.854-1.82 1.458-3.232 1.458-2.202 0-3.437-1.593-3.437-3.256 0-2.765 2.446-4.155 6.491-4.133v-.179c0-.72-.293-1.91-2.225-1.91-1.079 0-2.201.338-2.942.808l-.539-1.797c.809-.495 2.224-.966 3.952-.966 3.505 0 4.517 2.226 4.517 4.604l-.001 3.956zm-2.696-2.717c-1.955-.046-3.818.381-3.818 2.043 0 1.078.698 1.573 1.573 1.573 1.099 0 1.909-.721 2.156-1.506a2.03 2.03 0 0 0 .09-.606v-1.504h-.001zM35.114 29.745c0-1.259-.023-2.313-.088-3.256h2.423l.134 1.642h.068c.471-.855 1.662-1.89 3.481-1.89 1.91 0 3.885 1.235 3.885 4.696v6.489h-2.762v-6.175c0-1.572-.585-2.766-2.089-2.766-1.099 0-1.865.787-2.156 1.619-.09.246-.112.584-.112.896v6.425h-2.785l.001-7.68zM56.995 22.095V34.35c0 1.123.046 2.338.09 3.077h-2.469l-.113-1.728h-.046c-.65 1.212-1.977 1.975-3.57 1.975-2.606 0-4.671-2.223-4.671-5.59-.024-3.662 2.266-5.842 4.896-5.842 1.504 0 2.582.629 3.076 1.441h.047v-5.587h2.761v-.001zm-2.761 8.953c0-.223-.022-.493-.068-.719-.247-1.076-1.121-1.953-2.38-1.953-1.774 0-2.764 1.573-2.764 3.616 0 1.997.989 3.458 2.742 3.458 1.121 0 2.11-.765 2.379-1.955.068-.246.092-.517.092-.808v-1.639zM58.949 37.427V26.489h2.787v10.938h-2.787zM63.688 30.016c0-1.482-.021-2.539-.088-3.526h2.403l.088 2.087h.091c.539-1.549 1.818-2.087 2.989-2.087.269 0 .425-.046.649 0v2.427a3.812 3.812 0 0 0-.807-.09c-1.328 0-2.226.854-2.472 2.087a4.962 4.962 0 0 0-.089.856v5.658h-2.764v-7.412zM71.102 37.427V26.489h2.783v10.938h-2.783z"
+                    />
+                    <path
+                      fill="#FDD213"
+                      d="M91.221 14.921c-1.379-1.573-2.845-.861-4.01-.282-.49.242-4.027 2.247-4.027 2.247-1.938.799-3.447-.073-4.039-.807a1.738 1.738 0 0 1-.153-.221l-.138-.239a10.756 10.756 0 0 0-.776-1.161 6.556 6.556 0 0 0-.558-.637c-1.326-1.339-3.445-2.276-6.987-.574-1.677.972-7.14 4.093-7.14 4.093-2.053.845-3.623-.184-4.133-.939a.549.549 0 0 1-.06-.091l-.067-.114-.346-.566a9.512 9.512 0 0 0-.502-.721 7.25 7.25 0 0 0-.559-.636c-1.317-1.331-3.425-2.266-6.936-.596-2.123 1.212-7.061 4.035-7.061 4.035l-.002.002-3.614 2.065 1.87 2.296c.787.75 2.266 1.98 4.554.943 0 0 6.315-3.657 6.34-3.668 5.399-2.963 8.063-.132 9.241 1.755.041.059.074.123.111.18l.002.003c.015.023.024.044.037.066l.133.218c.574.87 1.479 1.432 2.558 1.406.595-.012.999-.206 1.587-.533l6.11-3.544.013-.006c5.467-2.999 8.176.017 9.333 1.904.09.163.192.319.297.464.573.777 1.363 1.286 2.367 1.261.663-.013 1.406-.411 1.517-.484l7.325-4.228c.002.002-.746-1.129-2.287-2.891z"
+                    />
+                  </svg>
+                  <h5>Bank Mandiri</h5>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-around align-items-center"
+                >
+                  <svg
+                    width="70"
+                    height="70"
+                    viewBox="2.64 5.382 170.852 49.945"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g fill-rule="evenodd">
+                      <g fill="#f15a23">
+                        <path
+                          d="m2.64 22.756 14.413 18.182-14.413 11.944zm5.8 30.126 10.846-9.073 7.496 9.073zm-5.8-39.855 3.76 4.758 15.466 19.325 5.012-3.99s-4.16-4.898-6.954-10.364c-5.462-10.686-1.595-17.34-1.595-17.34h-15.689zm21.43 27.067 5.105-4.216s4.874 6.416 10.526 7.931c7.407 1.985 10.686-2.87 10.686-2.87v11.943h-16.268l3.668-3.172s-1.914 1.276-6.595-1.966c-2.762-1.914-7.121-7.65-7.121-7.65zm.47-34.712s-1.628 2.218-.47 7.645c1.24 5.8 6.166 11.94 6.155 11.802 0 0 .316-6.096 3.894-9.673 7.625-7.625 16.268-3.086 16.268-3.086v-6.653z"
+                        />
+                        <path
+                          d="m50.387 20.109s-4.822-4.13-9.015-4.13c-5.363 0-8.29 4.63-8.29 7.988 0 4.892 2.348 7.61 4.705 9.967 3.387 3.387 7.508 7.04 12.6 4.1z"
+                        />
+                      </g>
+                      <path
+                        d="m105.304 5.88h11.38s10.08 15.263 15.034 21.57c4.954 6.305 10.286 13.488 10.286 13.488v-31.64c0-1.367-3.588-3.418-3.588-3.418h13.122s-4.305 1.769-4.305 3.418v46.029s-4.132-2.291-8.817-7.735c-5.263-6.116-23.988-30.81-23.988-30.81v31.984c0 1.638 3.588 4.116 3.588 4.116h-12.712s3.486-2.498 3.486-4.116v-39.468c0-1.453-3.486-3.418-3.486-3.418zm53.583 0h14.605s-3.922 1.857-3.922 3.418v39.468c0 1.705 3.922 4.116 3.922 4.116h-14.605s3.652-2.465 3.652-4.116v-39.468c0-1.5-3.652-3.418-3.652-3.418zm-96.55 0s3.786 1.888 3.786 3.418v39.468c0 1.678-3.786 4.116-3.786 4.116h21.636c1.352 0 16.497-2.477 16.497-14.153s-11.764-12.77-11.764-12.77 7.167-1.992 7.167-9.98c0-8.612-10.548-10.1-11.9-10.1h-21.636zm11.493 19.305v-14.694h8.79c1.352 0 6.085 1.579 6.085 7.437 0 4.828-4.733 7.257-6.086 7.257h-8.79zm0 3.854h10.142c1.352 0 9.33 2.073 9.33 8.995 0 7.057-7.978 9.558-9.33 9.558h-10.142z"
+                        fill="#005e6a"
+                      />
+                    </g>
+                  </svg>
+                  <h5>Bank BNI</h5>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-around align-items-center"
+                >
+                  <img src="asset/img/icon/bri.png" alt="..." width="70" />
+                  <h5>Bank BRI</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
